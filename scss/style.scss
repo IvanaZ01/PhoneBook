@@ -1,0 +1,264 @@
+@import 'presets';
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap');
+
+body{
+    background-color: $light-blue !important;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.wrapper{
+    display: flex;
+    position: relative;
+}
+
+.details{
+    position: absolute;
+    background-color: $primary-color;
+    width: 100%;    
+    max-width: 600px;
+    left: 100%;
+    text-align: center;
+    display: none;
+    
+    &_header{
+        display: flex;
+        padding: 1em 1.5em;
+        justify-content: space-between;
+        
+        &_info{
+            color: $white;
+            font-family:'Lobster', cursive;
+        }
+    }
+    
+        &_close{
+            color: $white;    
+            background: transparent;
+            font-size: 1.5rem;
+            padding: 0 .2em;
+            border: none;
+            cursor: pointer;
+        }
+    
+    &_img{
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin: 0 auto;
+        position: relative;
+        margin-bottom: .5em;
+        
+        &_child{
+            width: 100%;
+            position: relative;
+
+        }
+    }
+    
+    &_body{
+        height: 100vh;
+        background-color: $white;
+        border-radius: 20px 20px 0 0;
+        width: 100%;
+        padding: 1em 1.5em;
+
+    }
+
+    &_name{
+        color: $dark-blue;
+    }
+
+    &_phone{
+        color: $secondary-color;
+        margin-bottom: 2em;
+    }
+
+    &_body button {
+        width: 130px;
+        margin: 0 auto .5em;
+        color: $white;
+        border: none;
+        padding: .3em;
+        border-radius: 10px;
+        display: block;
+        cursor: pointer;
+        transition: background-color 50ms ease-in;
+    }
+
+    & .edit-btn{
+        background-color: $primary-color;
+        
+    }
+
+    & .delete-btn{
+        background-color: $danger;
+    }
+}
+
+.openedDetails{
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.phonebook{
+    width: 100%;
+    max-width: 600px;
+    background-color: $primary-color;
+    margin: 0 auto;
+}
+
+.header{
+    display: flex;
+    padding: 1em 1.5em;
+    justify-content: space-between;
+
+    .heading{
+        color: $white;
+        font-family:'Lobster', cursive;
+    }
+
+    .add-btn{
+        color: $white;    
+        background: transparent;
+        border: 2px solid $white;
+        border-radius: 50px;
+        font-size: 1.5rem;
+        padding: 0 .6em;
+        height: 40px;
+        align-self: center;
+        transition: 
+        color 50ms ease-in,
+        background-color 50ms ease-in;
+    }
+}
+
+
+.containerr{
+    background-color: $white;
+    min-height: 100vh;
+    height: fit-content;
+    border-radius: 20px 20px 0 0;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1em 1.5em;
+    height: 4.5em;
+    position: relative;
+    border-bottom: 1px solid $light-blue;
+    border-radius: 20px;
+
+    &_image-div{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+    }
+    &_img{
+        width: 100%;
+    }
+
+    &_name{
+        position: relative;
+        right: 2%;
+        font-size: 1.1rem;
+        color: $dark-blue;
+        margin: 0;
+    }
+
+    .show-number{
+        background-color: $secondary-color;
+        border: none;
+        border-radius: 30px;
+        padding: .3em .8em;
+        color: $dark-blue;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: 
+        background-color 50ms ease-in,
+        color 50ms ease-in
+        ;
+
+
+    }
+}
+@media(min-width: 360px){
+    .contact_name{
+        right: 8%;
+    }
+}
+
+@media(min-width: 460px){
+    .contact_name{
+        right: 18%;
+    }
+}
+@media(min-width: 500px){
+    .contact_name{
+        right: 21%;
+    }
+}
+
+@media(min-width: 600px){
+    .contact_name{
+        right: 22%;
+    }
+}
+
+@media(hover:hover){
+    .add-btn:hover{
+        background-color: $light-blue;
+        color: $primary-color;
+    }
+
+    .show-number:hover{
+        background-color: $primary-color;
+        color: $white;
+        
+    }
+
+    .edit-btn:hover{
+        background-color: lighten($primary-color, 10%);
+    }
+
+    .delete-btn:hover{
+        background-color: lighten($danger, 10%);
+    }
+}
+
+input {
+    display: block;
+    padding: .5em 1em;
+    border: 2px solid $primary-color;
+    margin-bottom: 1em;
+    border-radius: 30px;
+    width: 100%;
+    color: $dark-blue;
+}
+
+.btn-primary{
+    background-color: $primary-color;
+}
+
+.modal-title{
+    color: $white;
+}
+
+.modal-header{
+    background-color: $primary-color;
+}
+
+.hide{
+    display: none;
+}
+
+.errorPara{
+    color: red;
+}

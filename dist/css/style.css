@@ -21,16 +21,25 @@ body {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  z-index: 2;
 }
 
 .details {
   position: absolute;
   background-color: #189AB4;
   width: 100%;
-  max-width: 600px;
-  left: 100%;
   text-align: center;
-  display: none;
+  left: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 200ms ease;
+  transition: -webkit-transform 200ms ease;
+  transition: transform 200ms ease;
+  transition: transform 200ms ease, -webkit-transform 200ms ease;
 }
 
 .details_header {
@@ -111,10 +120,8 @@ body {
 }
 
 .openedDetails {
-  display: block;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 .phonebook {
